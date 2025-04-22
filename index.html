@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Tap Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <div class="score-item">
+                <img src="https://assets.stickpng.com/images/5cb78671a7c7755bf004c14b.png" alt="Score" class="icon">
+                <span>Score: <span id="score">0</span></span>
+            </div>
+            <div class="score-item">
+                <img src="https://www.svgrepo.com/show/80/timer.svg" alt="Timer" class="icon">
+                <span>Time: <span id="timer">30</span>s</span>
+            </div>
+            <div class="high-score">
+                High Score: <span id="high-score">0</span>
+            </div>
+        </div>
+        
+        <div id="game-area"></div>
+        
+        <div id="start-screen" class="screen">
+            <div class="screen-content">
+                <img src="https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" 
+                     alt="TikTok" class="game-logo">
+                <h1>TikTok Tap Challenge</h1>
+                <div class="instructions">
+                    <p>🎯 Tap the TikTok logos before they disappear</p>
+                    <p>⚡ Quick taps = bonus points</p>
+                    <p>🎮 Miss 3 logos = game over</p>
+                </div>
+                <button id="start-btn" class="pulse">Start Game</button>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="screen hidden">
+            <div class="screen-content">
+                <h2>Game Over!</h2>
+                <div class="final-stats">
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <p>Best Combo: <span id="best-combo">0</span></p>
+                </div>
+                <button id="restart-btn" class="pulse">Play Again</button>
+                <button id="share-btn" class="share-btn">Share Score</button>
+            </div>
+        </div>
+        
+        <div id="combo-indicator" class="hidden">x<span id="combo-count">1</span></div>
+    </div>
+    <audio id="pop-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" preload="auto"></audio>
+    <audio id="combo-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
